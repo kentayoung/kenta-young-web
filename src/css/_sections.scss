@@ -1,0 +1,32 @@
+.section-header {
+	font-size: calc(1.325rem + 0.9vw);
+	color: $color-font-light;
+	font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.section-container {
+	width: calc(100vw - 110px);
+  max-width: 900px;
+	margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.section-content{
+  font-size: 1rem;
+  color: $color-font-light;
+
+}
+
+// About
+#about {
+	min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+	.section-container {
+		width: calc(100vw - 40px);
+	}
+}
