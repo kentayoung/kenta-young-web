@@ -25,15 +25,6 @@ const ProgressBar = (props) => {
 	return (
 		<TrackVisibility once>
 			<ProgressBarComp {...props} />
-			{/* <div className='pb-container'>
-				<div className='pb-title'>{props.title}</div>
-				<div className='pb-bar'>
-					<div
-						style={pbStyle}
-						className={isVisible ? 'pb-bar-progress pb-animate' : ''}
-					></div>
-				</div>
-			</div> */}
 		</TrackVisibility>
 	);
 };
