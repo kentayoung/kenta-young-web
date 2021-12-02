@@ -9,7 +9,12 @@ import SkillsSection from './components/skills-section';
 import ContactSection from './components/contact-section';
 import Footer from './components/footer';
 
+import { getAnalytics } from 'firebase/analytics';
+import firebase from '../src/config/firebaseConfig';
+
 function App() {
+getAnalytics(firebase);
+
 	return (
 		<div className='app'>
 			<Navbar />
