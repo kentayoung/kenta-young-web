@@ -10,6 +10,12 @@ const Navbar = (props) => {
 		});
 	}, []);
 
+const handleTogglerClicked = () => {
+	setTogglerClicked(!togglerClicked);
+	if (togglerClicked) document.body.style.overflow = 'scroll';
+	else document.body.style.overflow = 'hidden';
+};
+
 
 
 	return (
@@ -21,7 +27,7 @@ const Navbar = (props) => {
 		>
 			<div className='nav-brand'>KENTA</div>
 			<div
-				onClick={() => setTogglerClicked(!togglerClicked)}
+				onClick={handleTogglerClicked}
 				className={togglerClicked ? 'nav-toggler active' : 'nav-toggler'}
 			>
 				<div className='nav-toggler-line1'></div>
@@ -40,7 +46,7 @@ const Navbar = (props) => {
 									: { opacity: 1 }
 							}
 						>
-							<a href={item.href} className='link-hover' onClick={() => setTogglerClicked(false)}>
+							<a href={item.href} className='link-hover' onClick={handleTogglerClicked}>
 								{item.display}
 							</a>
 						</li>
