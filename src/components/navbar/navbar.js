@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItems } from './menu-items';
+import {FaInstagram, FaLinkedin} from 'react-icons/fa';
 
 const Navbar = (props) => {
 	const [togglerClicked, setTogglerClicked] = useState(false);
@@ -25,7 +26,7 @@ const handleTogglerClicked = () => {
 				(togglerClicked ? 'active ' : '') + (scrolled ? 'scrolledNav' : '')
 			}
 		>
-			<div className='nav-brand'>KENTA</div>
+			{/* <div className='nav-brand'>KENTA</div> */}
 			<div
 				onClick={handleTogglerClicked}
 				className={togglerClicked ? 'nav-toggler active' : 'nav-toggler'}
@@ -36,22 +37,35 @@ const handleTogglerClicked = () => {
 			</div>
 			<ul className={togglerClicked ? 'nav-items active' : 'nav-items'}>
 				{MenuItems.map((item, i) => {
-					return (
-						<li
-							className='nav-item'
-							key={i}
-							style={
-								togglerClicked
-									? { animation: `navLinkFadeIn 1s ease forwards ${i / MenuItems.length + 0.25}s` }
-									: { opacity: 1 }
-							}
-						>
-							<a href={item.href} className='link-hover' onClick={handleTogglerClicked}>
-								{item.display}
-							</a>
-						</li>
-					);
-				})}
+						return (
+							<li
+								className='nav-item'
+								key={i}
+								style={
+									togglerClicked
+										? { animation: `navLinkFadeIn 1s ease forwards ${i / MenuItems.length + 0.25}s` }
+										: { opacity: 1 }
+								}
+							>
+								<a href={item.href} className='link-hover' onClick={handleTogglerClicked}>
+									{item.display}
+								</a>
+							</li>
+							)
+						}
+					)
+				}
+			<li className="nav-item nav-footer" style={
+				togglerClicked
+				? { animation: `navLinkFadeIn 1s ease forwards ${MenuItems.length / MenuItems.length + 0.25}s` }
+				: { opacity: 1 }
+			}>
+
+					<a href="https://www.linkedin.com/in/kentayoung" target="_blank" rel="noreferrer" className="icon-circle"><FaLinkedin/></a>
+					<a href="https://www.instagram.com/kenta_young/" target="_blank" rel="noreferrer" className="icon-circle"><FaInstagram/></a>
+
+			</li>
+				
 			</ul>
 		</nav>
 	);

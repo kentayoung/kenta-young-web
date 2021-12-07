@@ -34,14 +34,18 @@ nav {
 		color: $color-font-light;
     text-decoration: none;
 	}
+}
 
-	// a:hover {
-	// 	color: $color-font-light-hover;
-	// }
+.nav-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
 
-	// a:visited {
-	// 	color: $color-font-light;
-	// }
+	.icon-circle {
+		height: 50px;
+		width: 50px;
+	}
 }
 
 .nav-item:hover {
@@ -151,5 +155,13 @@ nav {
 			transform: rotate(-135deg) translate(2px, 6px);
 			transition: all 0.5s ease;
 		}
+	}
+}
+
+
+
+@media screen and (min-width: 900px){
+	.nav-footer{
+		display: none;
 	}
 }

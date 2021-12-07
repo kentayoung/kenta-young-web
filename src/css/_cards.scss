@@ -13,7 +13,7 @@
 	margin-bottom: 20px;
 	margin-right: 20px;
 	margin-left: 20px;
-	max-width: 400px;
+	max-width: 300px;
 }
 .card-icon {
 	height: 20px;
@@ -35,6 +35,7 @@
 @media screen and (max-width: 900px) {
 	.card {
 		width: 90vw;
+		max-width: 500px;
 	}
 	.contact-cards {
 		flex-direction: column;

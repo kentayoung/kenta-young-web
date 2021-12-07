@@ -69,9 +69,11 @@ body {
 	}
 
 	h2 {
-		font-size: 3vw;
+		font-size: 3.5vw;
 		font-weight: 300;
 		color: rgba(255, 255, 255, 0.5);
+		animation: 1s linear forwards 1s fadeIn;
+		opacity: 0;
 	}
 }
 
