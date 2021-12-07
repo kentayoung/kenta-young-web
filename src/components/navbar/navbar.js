@@ -43,7 +43,7 @@ const handleTogglerClicked = () => {
 								key={i}
 								style={
 									togglerClicked
-										? { animation: `navLinkFadeIn 1s ease forwards ${i / MenuItems.length + 0.25}s` }
+										? { animation: `navLinkFadeIn .75s ease forwards ${i / MenuItems.length}s` }
 										: { opacity: 1 }
 								}
 							>
@@ -57,7 +57,7 @@ const handleTogglerClicked = () => {
 				}
 			<li className="nav-item nav-footer" style={
 				togglerClicked
-				? { animation: `navLinkFadeIn 1s ease forwards ${MenuItems.length / MenuItems.length + 0.25}s` }
+				? { animation: `navLinkFadeIn .75s ease forwards ${MenuItems.length / MenuItems.length}s` }
 				: { opacity: 1 }
 			}>
 
