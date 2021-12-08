@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItems } from './menu-items';
-import {FaInstagram, FaLinkedin} from 'react-icons/fa';
+import {FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa';
 
 const Navbar = (props) => {
 	const [togglerClicked, setTogglerClicked] = useState(false);
@@ -63,7 +63,7 @@ const handleTogglerClicked = () => {
 
 					<a href="https://www.linkedin.com/in/kentayoung" target="_blank" rel="noreferrer" className="icon-circle"><FaLinkedin/></a>
 					<a href="https://www.instagram.com/kenta_young/" target="_blank" rel="noreferrer" className="icon-circle"><FaInstagram/></a>
-
+					<a href="https://www.facebook.com/kentayoungphotography" target="_blank" rel='noreferrer' className="icon-circle"><FaFacebook/></a>
 			</li>
 				
 			</ul>

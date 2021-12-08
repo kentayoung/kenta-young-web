@@ -18,8 +18,8 @@ const ContactSection = React.forwardRef((props, ref) => {
 					<h4>Email</h4>
 					<hr className='card-section-divider' />
 					<div className='card-section-details'>
-						<a href='mailto:kentamyoung@gmail.com' className='link-hover-mid'>
-							KentaMYoung@gmail.com
+						<a href='mailto:kenta@kentayoung.dev' className='link-hover-mid'>
+							Kenta@KentaYoung.dev
 						</a>
 					</div>
 				</div>
@@ -32,7 +32,7 @@ const ContactSection = React.forwardRef((props, ref) => {
 							303-249-0977
 						</a>
 					</div>
-				</div>
+				</div>	
 			</IconContext.Provider>
 		</section>
 	);

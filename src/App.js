@@ -9,8 +9,8 @@ import SkillsSection from './components/skills-section';
 import ContactSection from './components/contact-section';
 import Footer from './components/footer';
 
-import { getAnalytics } from 'firebase/analytics';
 import firebase from '../src/config/firebaseConfig';
+import { getAnalytics } from 'firebase/analytics';
 
 function App() {
 getAnalytics(firebase);

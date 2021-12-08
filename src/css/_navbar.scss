@@ -8,12 +8,12 @@ nav {
 	width: 100vw;
 	height: 50px;
 	z-index: 999;
-	transition: all 1s ease;
+	transition: background-color 1s ease;
 }
 
 .scrolledNav {
 	background-color: $color-nav-active;
-	transition: all 1s ease;
+	transition: background-color 1s ease;
 }
 
 .nav-items {
