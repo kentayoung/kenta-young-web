@@ -17,6 +17,11 @@ const handleTogglerClicked = () => {
 	else document.body.style.overflow = 'hidden';
 };
 
+const setTogglerFalse = () => {
+	setTogglerClicked(false)
+	document.body.style.overflow = 'scroll';
+}
+
 
 
 	return (
@@ -47,7 +52,7 @@ const handleTogglerClicked = () => {
 										: { opacity: 1 }
 								}
 							>
-								<a href={item.href} className='link-hover' onClick={handleTogglerClicked}>
+								<a href={item.href} className='link-hover' onClick={setTogglerFalse}>
 									{item.display}
 								</a>
 							</li>
