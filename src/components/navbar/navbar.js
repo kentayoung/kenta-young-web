@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'
 import { MenuItems } from './menu-items';
 import {FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa';
 
@@ -20,6 +22,12 @@ const handleTogglerClicked = () => {
 const setTogglerFalse = () => {
 	setTogglerClicked(false)
 	document.body.style.overflow = 'scroll';
+}
+
+const scrollWithOffset = (el) => {
+	const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+	const yOffset = -80; 
+	window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
 }
 
 
@@ -48,13 +56,13 @@ const setTogglerFalse = () => {
 								key={i}
 								style={
 									togglerClicked
-										? { animation: `navLinkFadeIn .75s ease forwards ${i / MenuItems.length}s` }
+										? { animation: `navLinkFadeIn .75s ease forwards ${(i + .25) / MenuItems.length}s` }
 										: { opacity: 1 }
 								}
 							>
-								<a href={item.href} className='link-hover' onClick={setTogglerFalse}>
+								<HashLink scroll={el => scrollWithOffset(el)} to={item.href} className='link-hover' onClick={setTogglerFalse}>
 									{item.display}
-								</a>
+								</HashLink>
 							</li>
 							)
 						}
@@ -62,7 +70,7 @@ const setTogglerFalse = () => {
 				}
 			<li className="nav-item nav-footer" style={
 				togglerClicked
-				? { animation: `navLinkFadeIn .75s ease forwards ${MenuItems.length / MenuItems.length}s` }
+				? { animation: `navLinkFadeIn .75s ease forwards ${(MenuItems.length + .25) / MenuItems.length}s` }
 				: { opacity: 1 }
 			}>
 

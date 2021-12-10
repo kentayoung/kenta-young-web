@@ -15,6 +15,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	color: $color-font-light;
 }
 
 html {
@@ -102,10 +103,18 @@ a:hover {
 	transition: transform 0.25s ease;
 }
 
+.page{
+	min-height: calc(100vh - 150px);
+	margin-top: 50px;
+}
+
+
+
+
+
+
 // Desktop
 @media screen and (min-width: 900px) {
-
-
 	.link-hover,
 	.link-hover-light,
 	.link-hover-mid {

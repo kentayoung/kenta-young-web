@@ -1,28 +1,36 @@
 import './App.css';
 import './css/kentaYoungWeb.scss';
 import React from 'react';
-
-import Navbar from './components/navbar/navbar';
-import Masthead from './components/masthead';
-import AboutSection from './components/about-section';
-import SkillsSection from './components/skills-section';
-import ContactSection from './components/contact-section';
-import Footer from './components/footer';
-
+import {
+	BrowserRouter as Router,
+	Route,
+	Routes,
+	Navigate,
+} from 'react-router-dom';
 import firebase from '../src/config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
 
+import Navbar from './components/navbar/navbar';
+import Home from './routes/home';
+import Photography from './routes/photography';
+import PageNotFound from './routes/pageNotFound';
+import Footer from './components/footer';
+
 function App() {
-getAnalytics(firebase);
+	getAnalytics(firebase);
 
 	return (
 		<div className='app'>
-			<Navbar />
-			<Masthead />
-			<AboutSection />
-			<SkillsSection />
-			<ContactSection />
-			<Footer />
+			<Router>
+				<Navbar Router={Router} />
+				<Routes>
+					<Route exact path='/' element={<Home />} />
+					<Route path='/photography' element={<Photography />} />
+					<Route exact path='/404' element={<PageNotFound />} />
+					<Route path='*' element={<Navigate to='/404' />} />
+				</Routes>
+				<Footer />
+			</Router>
 		</div>
 	);
 }
