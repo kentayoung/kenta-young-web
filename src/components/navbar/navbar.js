@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'
 import { MenuItems } from './menu-items';
 import {FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa';
@@ -39,7 +38,6 @@ const scrollWithOffset = (el) => {
 				(togglerClicked ? 'active ' : '') + (scrolled ? 'scrolledNav' : '')
 			}
 		>
-			{/* <div className='nav-brand'>KENTA</div> */}
 			<div
 				onClick={handleTogglerClicked}
 				className={togglerClicked ? 'nav-toggler active' : 'nav-toggler'}
