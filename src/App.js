@@ -14,10 +14,20 @@ import Navbar from './components/navbar/navbar';
 import Home from './routes/home';
 import Photography from './routes/photography';
 import PageNotFound from './routes/pageNotFound';
-import Footer from './components/footer';
 
 function App() {
 	getAnalytics(firebase);
+
+	const updateViewportHeight = () => {
+		document.documentElement.style.setProperty(
+			'--viewport-height',
+			`${window.innerHeight}px`
+		);
+	};
+
+	window.addEventListener('resize', updateViewportHeight);
+
+	updateViewportHeight();
 
 	return (
 		<div className='app'>
@@ -29,7 +39,6 @@ function App() {
 					<Route exact path='/404' element={<PageNotFound />} />
 					<Route path='*' element={<Navigate to='/404' />} />
 				</Routes>
-				<Footer />
 			</Router>
 		</div>
 	);

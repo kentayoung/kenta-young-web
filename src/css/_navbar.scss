@@ -82,7 +82,7 @@ nav {
 
 	nav.active {
 		background-color: $color-nav-active;
-		animation: all 1.5s ease;
+		animation: all 2s linear;
 	}
 
 	.nav-items {

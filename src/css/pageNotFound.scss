@@ -1,0 +1,132 @@
+@import './colors';
+
+#pageNotFoundContainer {
+	height: 100vh;
+	height: var(--viewport-height);
+	background-color: black;
+}
+
+#earthBackground {
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+}
+
+#astronaut {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+	-webkit-animation: moveX 30s linear 0s infinite alternate,
+		moveY 20s linear 0s infinite alternate;
+	-moz-animation: moveX 30s linear 0s infinite alternate,
+		moveY 20s linear 0s infinite alternate;
+	-o-animation: moveX 30s linear 0s infinite alternate,
+		moveY 20s linear 0s infinite alternate;
+	animation: moveX 30s linear 0s infinite alternate,
+		moveY 20s linear 0s infinite alternate;
+
+    &:hover{
+      cursor: pointer;
+    }
+}
+
+#pageNotFoundHeaderContainer {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  color: $color-font-light;
+}
+
+.pageNotFoundTitle {
+	font-size: 2.5rem;
+	font-weight: 300;
+	animation: 2s linear forwards 0.5s fadeIn;
+	opacity: 0;
+  text-align: center;
+}
+
+.pageNotFoundDetail {
+	font-size: 1.25rem;
+	font-weight: 300;
+	animation: 2s linear forwards 0.5s fadeIn;
+	opacity: 0;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#homeRedirect {
+	color: $color-text-light;
+}
+
+.hideAstronaut {
+	transition: transform 2s linear;
+	transform: scale(0) rotate(-360deg);
+}
+
+@-webkit-keyframes moveX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 50px);
+	}
+}
+@-moz-keyframes moveX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 50px);
+	}
+}
+@-o-keyframes moveX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 50px);
+	}
+}
+@keyframes moveX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 50px);
+	}
+}
+@-webkit-keyframes moveY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(var(--viewport-height) - 50px);
+	}
+}
+@-moz-keyframes moveY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(var(--viewport-height) - 50px);
+	}
+}
+@-o-keyframes moveY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(var(--viewport-height) - 50px);
+	}
+}
+@keyframes moveY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(var(--viewport-height) - 50px);
+	}
+}
