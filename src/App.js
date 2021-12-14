@@ -8,7 +8,6 @@ import { getAnalytics } from 'firebase/analytics';
 import Navbar from './components/navbar/navbar';
 import Home from './routes/home';
 import Photography from './routes/photography';
-import PageNotFound from './routes/pageNotFound';
 
 function App() {
 	getAnalytics(firebase);
@@ -31,7 +30,6 @@ function App() {
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					<Route path='/photography' element={<Photography />} />
-					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</Router>
 		</div>

@@ -1,4 +1,23 @@
-@import './colors';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html {
+	max-width: 100vw;
+	width: 100vw;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #161616;
+}
+
+:root {
+	--viewport-height: 100%;
+}
 
 #pageNotFoundContainer {
 	height: 100vh;
@@ -10,12 +29,14 @@
 	width: 100vw;
 	position: absolute;
 	bottom: 0;
+	z-index: 0;
 }
 
 #astronaut {
 	width: 50px;
 	height: 50px;
 	position: absolute;
+  z-index: 3;
 
 	-webkit-animation: moveX 30s linear 0s infinite alternate,
 		moveY 20s linear 0s infinite alternate;
@@ -25,10 +46,10 @@
 		moveY 20s linear 0s infinite alternate;
 	animation: moveX 30s linear 0s infinite alternate,
 		moveY 20s linear 0s infinite alternate;
+}
 
-    &:hover{
-      cursor: pointer;
-    }
+#astronaut:hover, #homeRedirect:hover {
+	cursor: pointer;
 }
 
 #pageNotFoundHeaderContainer {
@@ -37,7 +58,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-  color: $color-font-light;
+	color: #f2f2f2;
 }
 
 .pageNotFoundTitle {
@@ -45,7 +66,8 @@
 	font-weight: 300;
 	animation: 2s linear forwards 0.5s fadeIn;
 	opacity: 0;
-  text-align: center;
+	text-align: center;
+	z-index: 1;
 }
 
 .pageNotFoundDetail {
@@ -55,11 +77,13 @@
 	opacity: 0;
 	text-align: center;
 	padding-top: 10px;
+	z-index: 1;
 }
 
 #homeRedirect {
-	color: $color-text-light;
+	color: #64a19d;
 }
+
 
 .hideAstronaut {
 	transition: transform 2s linear;
@@ -98,6 +122,8 @@
 		left: calc(100vw - 50px);
 	}
 }
+
+
 @-webkit-keyframes moveY {
 	from {
 		top: 0;
@@ -130,3 +156,37 @@
 		top: calc(var(--viewport-height) - 50px);
 	}
 }
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-o-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
