@@ -1,12 +1,7 @@
 import './App.css';
 import './css/kentaYoungWeb.scss';
 import React from 'react';
-import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import firebase from '../src/config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
 
@@ -36,8 +31,7 @@ function App() {
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					<Route path='/photography' element={<Photography />} />
-					<Route exact path='/404' element={<PageNotFound />} />
-					<Route path='*' element={<Navigate to='/404' />} />
+					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</Router>
 		</div>
