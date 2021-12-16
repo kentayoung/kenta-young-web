@@ -36,19 +36,16 @@ body {
 	width: 50px;
 	height: 50px;
 	position: absolute;
-  z-index: 3;
+	z-index: 3;
 
-	-webkit-animation: moveX 30s linear 0s infinite alternate,
-		moveY 20s linear 0s infinite alternate;
-	-moz-animation: moveX 30s linear 0s infinite alternate,
-		moveY 20s linear 0s infinite alternate;
-	-o-animation: moveX 30s linear 0s infinite alternate,
-		moveY 20s linear 0s infinite alternate;
-	animation: moveX 30s linear 0s infinite alternate,
-		moveY 20s linear 0s infinite alternate;
+	-webkit-animation: moveX 30s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
+	-moz-animation: moveX 30s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
+	-o-animation: moveX 30s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
+	animation: moveX 30s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
 }
 
-#astronaut:hover, #homeRedirect:hover {
+#astronaut:hover,
+#homeRedirect:hover {
 	cursor: pointer;
 }
 
@@ -83,7 +80,6 @@ body {
 #homeRedirect {
 	color: #64a19d;
 }
-
 
 .hideAstronaut {
 	transition: transform 2s linear;
@@ -122,7 +118,6 @@ body {
 		left: calc(100vw - 50px);
 	}
 }
-
 
 @-webkit-keyframes moveY {
 	from {
@@ -189,4 +184,3 @@ body {
 		opacity: 1;
 	}
 }
-

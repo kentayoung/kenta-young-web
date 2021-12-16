@@ -22,6 +22,7 @@ nav {
 	font-size: 1rem;
 	display: flex;
 	width: 85vw;
+	max-width: 1920px;
 	justify-content: flex-end;
 	margin-right: 2rem;
 }
@@ -93,7 +94,7 @@ nav {
 		width: 100vw;
 		position: absolute;
 		right: 0px;
-		height: calc(100vh - 50px);
+		height: calc(100vh - 48px);
 		top: 50px;
 		margin-right: 0px;
 		transform: translateX(-100%);

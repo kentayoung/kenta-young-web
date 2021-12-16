@@ -4,6 +4,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import firebase from '../src/config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
+import { HelmetProvider } from 'react-helmet-async';
 
 import Navbar from './components/navbar/navbar';
 import Home from './routes/home';
@@ -13,10 +14,7 @@ function App() {
 	getAnalytics(firebase);
 
 	const updateViewportHeight = () => {
-		document.documentElement.style.setProperty(
-			'--viewport-height',
-			`${window.innerHeight}px`
-		);
+		document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
 	};
 
 	window.addEventListener('resize', updateViewportHeight);
@@ -25,13 +23,15 @@ function App() {
 
 	return (
 		<div className='app'>
-			<Router>
-				<Navbar Router={Router} />
-				<Routes>
-					<Route exact path='/' element={<Home />} />
-					<Route path='/photography' element={<Photography />} />
-				</Routes>
-			</Router>
+			<HelmetProvider>
+				<Router>
+					<Navbar Router={Router} />
+					<Routes>
+						<Route exact path='/' element={<Home />} />
+						<Route path='/photography' element={<Photography />} />
+					</Routes>
+				</Router>
+			</HelmetProvider>
 		</div>
 	);
 }

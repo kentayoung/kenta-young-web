@@ -12,6 +12,14 @@
   padding-bottom: 100px;
 }
 
+.section-container-wide {
+	width: calc(100vw - 110px);
+  max-width: 1920px;
+	margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+
 .section-content{
   font-size: 1rem;
   color: $color-font-light;
