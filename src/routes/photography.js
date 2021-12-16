@@ -1,5 +1,8 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+
+import '../css/photography.scss';
+import { Helmet } from 'react-helmet';
+import ImageGallery from '../components/imageGallery/image-gallery';
 import Footer from '../components/footer';
 
 const Photography = () => {
@@ -10,9 +13,9 @@ const Photography = () => {
 				<meta name='description' content='Photographer based in Long Beach California.' />
 			</Helmet>
 			<div className='page'>
-				<section className='section-container'>
-					<h2 className='section-header'>Gallery</h2>
-					<div className='section-content'>Coming Soon...</div>
+				<section className='section-container-wide'>
+					<h2 className='section-header'>Photography</h2>
+					<ImageGallery />
 				</section>
 			</div>
 			<Footer />

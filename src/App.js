@@ -4,7 +4,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import firebase from '../src/config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
-import { HelmetProvider } from 'react-helmet-async';
 
 import Navbar from './components/navbar/navbar';
 import Home from './routes/home';
@@ -23,7 +22,6 @@ function App() {
 
 	return (
 		<div className='app'>
-			<HelmetProvider>
 				<Router>
 					<Navbar Router={Router} />
 					<Routes>
@@ -31,7 +29,6 @@ function App() {
 						<Route path='/photography' element={<Photography />} />
 					</Routes>
 				</Router>
-			</HelmetProvider>
 		</div>
 	);
 }
