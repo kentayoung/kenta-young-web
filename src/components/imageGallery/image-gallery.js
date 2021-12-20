@@ -1,9 +1,6 @@
 import React from 'react';
 import '../../css/imageGallery/imageGallery.scss';
 import { AutomotiveImages, TravelImages } from './images';
-import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
-
-
 
 const ImageGallery = ({ scrollPosition }) => {
 	const mapImgs = (colNum, type) => {
@@ -19,20 +16,12 @@ const ImageGallery = ({ scrollPosition }) => {
 		currentPhotos.forEach((img, i) => {
 			if (i === colNum || iterator === colNum) {
 				returnArr.push(
-
-					<ImgNextGen srcWebp={img.thumbWebp} fallback={img.thumbSrc} alt={img.alt} className='galleryImage' key={i}
-					// <LazyLoadImage
-					// 	src={img.thumbSrc}
-					// 	alt={i}
-					// 	className='galleryImage'
-					// 	key={i}
-					// 	effect='blur'
-					// 	scrollPosition={scrollPosition}
-					// 	placeholder={<div className='placeholder'>Test</div>}
-					// 	threshold='100'
-					// 	afterLoad={() => {
-					// 		console.log('loaded...');
-					// 	}}
+					<ImgNextGen
+						srcWebp={img.thumbWebp}
+						fallback={img.thumbSrc}
+						alt={img.alt}
+						className='galleryImage'
+						key={i}
 					/>
 				);
 			}
@@ -48,17 +37,11 @@ const ImageGallery = ({ scrollPosition }) => {
 		});
 	};
 
-	const ImgNextGen = ({
-		srcWebp,
-		fallback,
-		alt,
-		...props
-	
-	}) => {
+	const ImgNextGen = ({ srcWebp, fallback, alt, ...props }) => {
 		return (
 			<picture>
-				<source srcSet={srcWebp} type="image/webp" />
-				<source srcSet={fallback} type="image/jpeg" />
+				<source srcSet={srcWebp} type='image/webp' />
+				<source srcSet={fallback} type='image/jpeg' />
 				<img src={fallback} alt={alt} {...props} />
 			</picture>
 		);
@@ -83,4 +66,4 @@ const ImageGallery = ({ scrollPosition }) => {
 	);
 };
 
-export default trackWindowScroll(ImageGallery);
+export default ImageGallery

@@ -65,35 +65,6 @@ import JoshuaTreeWebp from '../../assets/galleryImages/thumbnail/webp/Joshua-Tre
 
 
 
-// [
-// 	"/static/media/Bangkok-Thailand-City-Night-Long-Exposure-Thumbnail.77a86a94.jpg",
-// 	"/static/media/Bangkok-Thailand-Night-Cityscape-Thumbnail.c439f046.jpg",
-// 	"/static/media/Chang-Beer-Thumbnail.10e7152f.jpg",
-// 	"/static/media/Gardens-By-The-Bay-Night-Marina-Bay-Sands-Thumbnail.380ebdc6.jpg",
-// 	"/static/media/Ireland-Castle-Sunset-Thumbnail.15936aa8.jpg",
-// 	"/static/media/Jellyfish-Aquarium-Of-The-Pacific-Thumbnail.2577ef48.jpg",
-// 	"/static/media/Marina-Bay-Sands-Night-Thumbnail.44b333df.jpg",
-// 	"/static/media/Niption-California-Sunset-Thumbnail.75e67391.jpg",
-// 	"/static/media/Nipton-California-Camping-Sunset-Moon-Thumbnail.0ad59e33.jpg",
-// 	"/static/media/Quorra-Corgi-Foo-Dog-Thumbnail.43d9623e.jpg",
-// ]
-
-function importAll(r) {
-	let images = [];
-	let imageStrings = [];
-	r.keys().forEach((item, i) => {
-		// console.log(r(item))
-		images[i] = {
-			thumbSrc: r(item).default,
-			webp: '/static/media/galleryImages/thumbnail/webp/Mclaren-765lt-Shift-S3ctor-Thumb.webp',
-		};
-		imageStrings.push(r(item).default);
-	});
-	// console.log(imageStrings);
-	return images;
-}
-
-
 const autoImages = [
 	{
 		thumbSrc: mclarenThumb,
