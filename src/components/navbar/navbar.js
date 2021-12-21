@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HashLink } from 'react-router-hash-link'
 import { MenuItems } from './menu-items';
-import {FaInstagram, FaLinkedin, FaFacebook} from 'react-icons/fa';
+import {FaInstagram, FaLinkedin, FaFacebook, FaGithub} from 'react-icons/fa';
 
 const Navbar = (props) => {
 	const [togglerClicked, setTogglerClicked] = useState(false);
@@ -75,6 +75,7 @@ const scrollWithOffset = (el) => {
 					<a id="linkedIn-KentaYoung" href="https://www.linkedin.com/in/kentayoung" target="_blank" rel="noreferrer" className="icon-circle"><FaLinkedin/></a>
 					<a id="instagram-KentaYoung" href="https://www.instagram.com/kenta_young/" target="_blank" rel="noreferrer" className="icon-circle"><FaInstagram/></a>
 					<a id="facebook-KentaYoung" href="https://www.facebook.com/kentayoungphotography" target="_blank" rel='noreferrer' className="icon-circle"><FaFacebook/></a>
+					<a id="github-KentaYoung" href="https://github.com/kentayoung" target="_blank" rel='noreferrer' className="icon-circle"><FaGithub/></a>
 			</li>
 				
 			</ul>

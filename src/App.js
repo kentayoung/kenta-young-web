@@ -11,7 +11,13 @@ import Home from './routes/home';
 const Photography = lazy(() => import('./routes/photography'));
 
 function App() {
-	getAnalytics(firebase);
+	if(window.location.host.indexOf('localhost') === -1){
+		getAnalytics(firebase);
+	}
+	else{
+		console.log("localhost: turning off analytics")
+	}
+
 
 	const updateViewportHeight = () => {
 		document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
