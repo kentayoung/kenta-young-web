@@ -11,7 +11,7 @@ import Home from './routes/home';
 const Photography = lazy(() => import('./routes/photography'));
 
 function App() {
-	if(window.location.host.indexOf('localhost') === -1){
+	if(window.location.host.indexOf('kentayoung') !== -1){
 		getAnalytics(firebase);
 	}
 	else{

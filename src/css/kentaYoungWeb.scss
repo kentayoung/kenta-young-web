@@ -15,7 +15,7 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-iframe{
+iframe {
 	z-index: 0 !important;
 }
 
@@ -65,10 +65,7 @@ body {
 		font-weight: 300;
 		font-size: 12vw;
 		line-height: 12vw;
-		background: -webkit-linear-gradient(
-			rgba(255, 255, 255, 1),
-			rgba(255, 255, 255, 0.25) 95%
-		);
+		background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.25) 95%);
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
 		opacity: 0;
@@ -90,7 +87,7 @@ h2 {
 	color: rgba(255, 255, 255, 0.5);
 }
 
-h3{
+h3 {
 	color: $color-font-light;
 }
 

@@ -1,7 +1,7 @@
 .icon-circle {
 	width: 50px;
 	height: 50px;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.2);
 	justify-content: center;
 	display: flex;
 	align-items: center;
@@ -16,10 +16,26 @@
 }
 
 .icon-circle:hover {
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.2);
 	svg {
 		transform: scale(1.5);
 		transition: all 0.5s ease;
 	}
+}
+
+#github-KentaYoung:hover {
+	background-color: #6cc644;
+}
+
+#facebook-KentaYoung:hover {
+	background-color: #1877f2;
+}
+
+#instagram-KentaYoung:hover {
+	background-color: #e1306c;
+}
+
+#linkedIn-KentaYoung:hover {
+	background-color: #0077b5;
 }
