@@ -1,23 +1,20 @@
 import './App.css';
 import './css/kentaYoungWeb.scss';
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import firebase from '../src/config/firebaseConfig';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import firebase from './config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
 import { HelmetProvider } from 'react-helmet-async';
 
 import Navbar from './components/navbar/navbar';
-import Home from './routes/home';
-const Photography = lazy(() => import('./routes/photography'));
+import AnimatedRoutes from './routes/animatedRoutes';
 
 function App() {
-	if(window.location.host.indexOf('kentayoung') !== -1){
+	if (window.location.host.indexOf('kentayoung') !== -1) {
 		getAnalytics(firebase);
+	} else {
+		console.log('localhost: turning off analytics');
 	}
-	else{
-		console.log("localhost: turning off analytics")
-	}
-
 
 	const updateViewportHeight = () => {
 		document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
@@ -32,12 +29,7 @@ function App() {
 			<HelmetProvider>
 				<Router>
 					<Navbar Router={Router} />
-					<Suspense fallback={<div></div>}>
-						<Routes>
-							<Route exact path='/' element={<Home />} />
-							<Route exact path='/photography' element={<Photography />} />
-						</Routes>
-					</Suspense>
+					<AnimatedRoutes />
 				</Router>
 			</HelmetProvider>
 		</div>

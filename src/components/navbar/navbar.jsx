@@ -30,7 +30,6 @@ const scrollWithOffset = (el) => {
 }
 
 
-
 	return (
 		<nav
 			id='navbar'
@@ -54,7 +53,7 @@ const scrollWithOffset = (el) => {
 								key={i}
 								style={
 									togglerClicked
-										? { animation: `navLinkFadeIn .75s ease forwards ${(i + .25) / MenuItems.length}s` }
+										? { animation: `navLinkFadeIn .75s ease forwards ${(i / MenuItems.length) }s` }
 										: { opacity: 1 }
 								}
 							>
@@ -68,7 +67,7 @@ const scrollWithOffset = (el) => {
 				}
 			<li className="nav-item nav-footer" style={
 				togglerClicked
-				? { animation: `navLinkFadeIn .75s ease forwards ${(MenuItems.length + .25) / MenuItems.length}s` }
+				? { animation: `navLinkFadeIn .75s ease forwards ${(MenuItems.length ) / MenuItems.length}s` }
 				: { opacity: 1 }
 			}>
 

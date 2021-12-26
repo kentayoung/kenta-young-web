@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import '../css/photography.scss';
 import { Helmet } from 'react-helmet-async';
@@ -7,7 +8,12 @@ import Footer from '../components/footer';
 
 const Photography = () => {
 	return (
-		<div>
+		<motion.div
+			initial={{ opacity: 0, y: -50 }}
+			animate={{ opacity: 1, y: 0 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
 			<Helmet>
 				<title>Kenta Young - Photography</title>
 				<meta name='description' content='Photographer based in Long Beach California.' />
@@ -19,7 +25,7 @@ const Photography = () => {
 				</section>
 			</div>
 			<Footer />
-		</div>
+		</motion.div>
 	);
 };
 
