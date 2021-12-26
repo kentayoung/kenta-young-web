@@ -7,11 +7,13 @@ import ImageGallery from '../components/imageGallery/image-gallery';
 import Footer from '../components/footer';
 
 const Photography = () => {
+	window.scrollTo(0,0);
+
 	return (
 		<motion.div
-			initial={{ opacity: 0, y: -50 }}
+			initial={{ opacity: 0, y: -50}}
 			animate={{ opacity: 1, y: 0 }}
-			exit={{ opacity: 0 }}
+			exit={{ opacity: 0, y: 0}}
 			transition={{ duration: 0.5 }}
 		>
 			<Helmet>

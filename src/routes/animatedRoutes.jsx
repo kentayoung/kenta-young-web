@@ -11,7 +11,7 @@ const AnimatedRoutes = () => {
 	return (
 		<AnimatePresence exitBeforeEnter initial={false}>
 			<Routes location={location} key={location.pathname}>
-				<Route exact path='/' element={<Home />} />
+				<Route path='/' element={<Home />} />
 				<Route exact path='/photography' element={<Photography />} />
 			</Routes>
 		</AnimatePresence>
