@@ -25,13 +25,18 @@
 }
 
 .section-intro{
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 
 // About
 #about {
   display: flex;
   flex-direction: column;
+
+	p {
+		padding: 5px 0;
+		line-height: 1.25rem;
+	}
 }
 
 @media screen and (max-width: 900px) {

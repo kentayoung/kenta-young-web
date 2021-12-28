@@ -2,7 +2,7 @@ $color-dark-grey: #333;
 $color-mid-grey: rgba(0, 0, 0, 0.5);
 $color-text-light: lighten($color-dark-grey, 75);
 $color-dark-blue: #242c3e;
-$color-seafoam: #628186;
+$color-seafoam: #64a19d;
 $color-white: #fff;
 $color-danger-red: #cc3300;
 
@@ -16,4 +16,5 @@ $color-font-light-hover: lighten($color-font, 90%);
 $color-font-link-hover: $color-text-light;
 $color-font-link-hover-mid: $color-font-mid;
 $color-font-link-hover-light: $color-font-light;
+$color-font-link-hover-blue: $color-seafoam;
 $color-danger: $color-danger-red;
