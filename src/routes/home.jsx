@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 import Masthead from '../components/masthead';
@@ -7,7 +6,7 @@ import SkillsSection from '../components/skills-section';
 import ContactSection from '../components/contact-section';
 import Footer from '../components/footer';
 
-const Home = ({ component: RouteComponent, ...rest }) => {
+const Home = () => {
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: -50 }}

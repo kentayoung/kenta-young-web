@@ -1,7 +1,6 @@
 import resume from '../assets/KentaYoungResume.pdf'
 
 const AboutSection = () => {
-
   return (
     <section id="about" className="section-container">
       <h2 className="section-header">About</h2>
@@ -17,7 +16,7 @@ const AboutSection = () => {
           stable and beautiful user interfaces.
         </p>
 				<p>
-					I'm currently open for opportunities. Feel free to reach out and check out my <a href={resume} className="link-hover-blue" download="KentaYoungResume.pdf"d>resume</a>. 
+					I'm currently open for opportunities. Feel free to reach out and check out my <a href={resume} className="link-hover-blue" download="KentaYoungResume.pdf">resume</a>. 
 				</p>
       </div>
     </section>
