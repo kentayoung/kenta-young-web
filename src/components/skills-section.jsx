@@ -1,4 +1,3 @@
-import React from 'react';
 import ProgressBar from './progressBar';
 
 const SkillsSection = () => {
