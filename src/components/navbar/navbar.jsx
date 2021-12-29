@@ -12,22 +12,22 @@ const Navbar = (props) => {
 		});
 	}, []);
 
-const handleTogglerClicked = () => {
-	setTogglerClicked(!togglerClicked);
-	if (togglerClicked) document.body.style.overflow = 'scroll';
-	else document.body.style.overflow = 'hidden';
-};
+	const handleTogglerClicked = () => {
+		setTogglerClicked(!togglerClicked);
+		if (togglerClicked) document.body.style.overflow = 'scroll';
+		else document.body.style.overflow = 'hidden';
+	};
 
-const setTogglerFalse = () => {
-	setTogglerClicked(false)
-	document.body.style.overflow = 'scroll';
-}
+	const setTogglerFalse = () => {
+		setTogglerClicked(false)
+		document.body.style.overflow = 'scroll';
+	}
 
-const scrollWithOffset = (el) => {
-	const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-	const yOffset = -80; 
-	window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
+	const scrollWithOffset = (el) => {
+		const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+		const yOffset = -80; 
+		window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+	}
 
 
 	return (
