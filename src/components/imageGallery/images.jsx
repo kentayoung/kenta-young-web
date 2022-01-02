@@ -23,10 +23,6 @@ import FordGtThumb from '../../assets/galleryImages/thumbnail/jpg/Ford-GT-F7F-Sh
 import FordGtThumbWebp from '../../assets/galleryImages/thumbnail/webp/Ford-GT-F7F-Shift-S3ctor-Pikes-Peak-Thumbnail.webp';
 import englishRacingPPAAThumb from '../../assets/galleryImages/thumbnail/jpg/English-Racing-F7F-Shift-S3ctor-Panorama-Thumbnail.jpg';
 import englishRacingPPAAThumbWebp from '../../assets/galleryImages/thumbnail/webp/English-Racing-F7F-Shift-S3ctor-Panorama-Thumbnail.webp';
-// import preSubaru from '../../assets/galleryImages/thumbnail/jpg/PRE-Racing-Subaru-WRX-STI-Thumbnail.jpg';
-// import preSubaruWebp from '../../assets/galleryImages/thumbnail/webp/PRE-Racing-Subaru-WRX-STI-Thumbnail.webp';
-// import gtrTail from '../../assets/galleryImages/thumbnail/jpg/Nissan-GTR-Taillight-Thumbnail.jpg';
-// import gtrTailWebp from '../../assets/galleryImages/thumbnail/webp/Nissan-GTR-Taillight-Thumbnail.webp';
 import bmwGtr from '../../assets/galleryImages/thumbnail/jpg/BMW-Nissan-GTR-Shift-S3ctor-Sunrise-Thumbnail.jpg';
 import bmwGtrWebp from '../../assets/galleryImages/thumbnail/webp/BMW-Nissan-GTR-Shift-S3ctor-Sunrise-Thumbnail.webp';
 import porsche from '../../assets/galleryImages/thumbnail/jpg/Porsche-911-Sunrise-Thumbnail.jpg';
@@ -62,7 +58,6 @@ import QuorraFoo from '../../assets/galleryImages/thumbnail/jpg/Quorra-Corgi-Foo
 import QuorraFooWebp from '../../assets/galleryImages/thumbnail/webp/Quorra-Corgi-Foo-Dog-Thumbnail.webp';
 import JoshuaTree from '../../assets/galleryImages/thumbnail/jpg/Joshua-Tree-Lee-Flat-Thumbnail.jpg';
 import JoshuaTreeWebp from '../../assets/galleryImages/thumbnail/webp/Joshua-Tree-Lee-Flat-Thumbnail.webp';
-
 
 
 const autoImages = [
