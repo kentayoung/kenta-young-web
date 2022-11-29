@@ -10,7 +10,6 @@ import Navbar from './components/navbar/navbar';
 import AnimatedRoutes from './routes/animatedRoutes';
 
 function App() {
-
 	const updateViewportHeight = () => {
 		document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
 	};
@@ -20,21 +19,24 @@ function App() {
 	if (process.env.NODE_ENV !== 'development') {
 		//setting up analytics for prod
 		getAnalytics(firebase);
-
-		const consoleStyleMain = 'font-size: 16px;';
-		const consoleStyleChild = 'font-size: 14px;';
-		console.group(`%c👋 Hey there, nice seeing you here. Don't forget to check out my other links.`, consoleStyleMain);
-		console.log(`%c👨‍💻 Github - https://github.com/kentayoung`, consoleStyleChild);
-		console.log(`%c📄 LinkedIn - https://www.linkedin.com/in/kentayoung`, consoleStyleChild);
-		console.log(`%c📧 Email - Kenta@KentaYoung.dev`, consoleStyleChild);
-		console.groupEnd();
-	}
-	else {
+	} else {
 		console.log('localhost: turning off analytics and custom console');
 	}
 
+	const consoleWelcomeMessage = () => {
+		const consoleStyleMain = 'font-size: 14px;';
+		const consoleStyleChild = 'font-size: 12px;';
+		console.group(`%c👋 Hey there, nice seeing you here. Don't forget to check out my other links.`, consoleStyleMain);
+		console.log(`%c👨‍💻 Github - https://github.com/kentayoung`, consoleStyleChild + '');
+		console.log(`%c📄 LinkedIn - https://www.linkedin.com/in/kentayoung`, consoleStyleChild);
+		console.log(`%c📧 Email - Kenta@KentaYoung.dev`, consoleStyleChild);
+		console.groupEnd();
+	};
+
+	consoleWelcomeMessage();
+
 	return (
-		<div className='app'>
+		<div className="app">
 			<HelmetProvider>
 				<Router>
 					<Navbar Router={Router} />
