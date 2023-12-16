@@ -9,8 +9,8 @@ const AboutSection = () => {
 					Hey, friends! <span>&#128075;</span>
 				</div>
 				<p>
-					My name is Kenta Young, a Software Engineer based in Long Beach, California. I'm hard
-					working and creative with more than 7 years of expertise. With a strong understanding of
+					My name is Kenta Young, a Software Engineer based in Idaho 🥔. I'm hard
+					working and creative with more than 9 years of expertise. With a strong understanding of
 					Javascript, HTML, and CSS coupled with a visually driven mind, I have a passion for
 					developing stable and beautiful user interfaces.
 				</p>

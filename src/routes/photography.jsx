@@ -17,7 +17,7 @@ const Photography = () => {
 		>
 			<Helmet>
 				<title>Kenta Young - Photography</title>
-				<meta name='description' content='Photographer based in Long Beach California.' />
+				<meta name='description' content='Photographer based in Idaho.' />
 			</Helmet>
 			<div className='page'>
 				<section className='section-container-wide'>
