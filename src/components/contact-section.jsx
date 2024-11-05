@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconContext } from 'react-icons';
-import { MdLocationPin, MdEmail, MdPhoneIphone } from 'react-icons/md';
+import { MdLocationPin, MdEmail } from 'react-icons/md';
 
 const ContactSection = React.forwardRef((props, ref) => {
 	return (
@@ -10,7 +10,7 @@ const ContactSection = React.forwardRef((props, ref) => {
 					<MdLocationPin className='card-icon' />
 					<h4 className="font-mid">Location</h4>
 					<hr className='card-section-divider' />
-					<div className='card-section-details'>Long Beach, California</div>
+					<div className='card-section-details'>SW Idaho</div>
 				</div>
 				<div className='card'>
 					<MdEmail className='card-icon' />
@@ -22,19 +22,11 @@ const ContactSection = React.forwardRef((props, ref) => {
 						</a>
 					</div>
 				</div>
-				<div className='card'>
-					<MdPhoneIphone className='card-icon' />
-					<h4 className="font-mid">Phone</h4>
-					<hr className='card-section-divider' />
-					<div className='card-section-details'>
-						<a href='tel:303-249-0977' className='link-hover-mid'>
-							303-249-0977
-						</a>
-					</div>
-				</div>	
 			</IconContext.Provider>
 		</section>
 	);
 });
+
+ContactSection.displayName = "ContactSection";
 
 export default ContactSection;

@@ -1,6 +1,5 @@
 import './App.css';
 import './css/kentaYoungWeb.scss';
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import firebase from './config/firebaseConfig';
 import { getAnalytics } from 'firebase/analytics';
@@ -15,18 +14,17 @@ function App() {
 	};
 	window.addEventListener('resize', updateViewportHeight);
 	updateViewportHeight();
-
-	if (process.env.NODE_ENV !== 'development') {
-		//setting up analytics for prod
-		getAnalytics(firebase);
-	} else {
-		console.log('localhost: turning off analytics and custom console');
-	}
+	if (import.meta.env.MODE !== "development") {
+    //setting up analytics for prod
+    getAnalytics(firebase);
+  } else {
+    console.log("localhost: turning off analytics and custom console");
+  }
 
 	const consoleWelcomeMessage = () => {
 		const consoleStyleMain = 'font-size: 14px;';
 		const consoleStyleChild = 'font-size: 12px;';
-		console.group(`%c👋 Hey there, nice seeing you here. Don't forget to check out my other links.`, consoleStyleMain);
+		console.group(`%c👋 Fancy seeing you here. Don't forget to check out my other links.`, consoleStyleMain);
 		console.log(`%c👨‍💻 Github - https://github.com/kentayoung`, consoleStyleChild + '');
 		console.log(`%c📄 LinkedIn - https://www.linkedin.com/in/kentayoung`, consoleStyleChild);
 		console.log(`%c📧 Email - Kenta@KentaYoung.dev`, consoleStyleChild);
