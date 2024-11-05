@@ -9,23 +9,38 @@ const AboutSection = () => {
           Hey, friends! <span>&#128075;</span>
         </div>
         <p>
-          My name is Kenta Young, a Software Engineer based in Idaho 🥔. I'm
+          My name is Kenta Young, a Software Engineer based in Idaho 🥔. I&#39;m
           hard working and creative with more than 10 years of expertise. With a
           strong understanding of Javascript, Shopify Liquid, HTML, and CSS
           coupled with a visually driven mind, I have a passion for developing
           stable and beautiful user interfaces.
         </p>
         <p>
-          I'm currently a full time Software Developer with{" "}
-          <a href="https://thebeyondgroup.com/">The Beyond Group</a> and have
-          had the opportunity to work with a variety of clients such as
-          <a href="https://thisisneeded.com">Needed.</a>,{" "}
-          <a href="https://fromourplace.com">Our Place</a>,{" "}
-          <a href="https://hukitchen.com">HU Kitchen</a>
+          I&#39;m currently a full time Software Developer with{" "}
+          <a href="https://thebeyondgroup.com/" className="link-hover-blue">
+            The Beyond Group
+          </a>{" "}
+          and have had the opportunity to work with clients such as{" "}
+          <a href="https://thisisneeded.com" className="link-hover-blue">
+            Needed.
+          </a>
+          ,{" "}
+          <a href="https://fromourplace.com" className="link-hover-blue">
+            Our Place
+          </a>
+          ,{" "}
+          <a href="https://houseofspoils.com" className="link-hover-blue">
+            House of Spoils
+          </a>
+          , and{" "}
+          <a href="https://hukitchen.com" className="link-hover-blue">
+            HU Kitchen
+          </a>
+          .
         </p>
         <p>
-          I'm always open to new opportunities to create, so please feel free to
-          reach out and check out my{" "}
+          I&#39;m always open to new opportunities to create, so please feel
+          free to reach out and check out my{" "}
           <a
             href={resume}
             className="link-hover-blue"

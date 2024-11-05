@@ -127,6 +127,9 @@ a:hover {
 
 .link-hover-blue {
   color: $color-font-link-hover-blue;
+  &:visited {
+    color: $color-font-link-hover-blue;
+  }
 }
 
 .page {
@@ -137,6 +140,7 @@ a:hover {
 .hidden {
   display: none;
 }
+
 
 // Desktop
 @media screen and (min-width: 900px) {
