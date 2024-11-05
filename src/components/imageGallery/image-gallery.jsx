@@ -50,14 +50,25 @@ const ImageGallery = ({ scrollPosition }) => {
 
   return (
     <div id="ImageGallery">
-      <h2>Automotive</h2>
+      <h2>Automotive Photography</h2>
+      <h3 className="gallery-description">
+        My love for photography spawned from my passion for cars. From just
+        wanting to take pictures my friends cars to traveling across the US to
+        shoot automotive events, it&apos;s been a fun journey. I&apos;m proud to
+        have had my work featured in magazines and across the web.
+      </h3>
       <div className="box">
         <div className="col">{mapImgs(0, "automotive")}</div>
         <div className="col">{mapImgs(1, "automotive")}</div>
         <div className="col">{mapImgs(2, "automotive")}</div>
       </div>
 
-      <h2>Travel</h2>
+      <h2>Travel Photography</h2>
+      <h3 className="gallery-description">
+        I have had the opportunity to travel to many places around the world and
+        have been able to capture a lot of interesting moments. These are some
+        of my favorite photos from my travels.
+      </h3>
       <div className="box">
         <div className="col">{mapImgs(0, "travel")}</div>
         <div className="col">{mapImgs(1, "travel")}</div>
