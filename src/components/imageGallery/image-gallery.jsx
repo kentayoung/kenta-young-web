@@ -22,6 +22,7 @@ const ImageGallery = ({ scrollPosition }) => {
 						alt={img.alt}
 						className='galleryImage'
 						key={i}
+						loading='lazy'
 					/>
 				);
 			}
