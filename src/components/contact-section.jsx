@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconContext } from 'react-icons';
-import { MdLocationPin, MdEmail, MdPhoneIphone } from 'react-icons/md';
+import { MdLocationPin, MdEmail } from 'react-icons/md';
 
 const ContactSection = React.forwardRef((props, ref) => {
 	return (
@@ -26,5 +26,7 @@ const ContactSection = React.forwardRef((props, ref) => {
 		</section>
 	);
 });
+
+ContactSection.displayName = "ContactSection";
 
 export default ContactSection;
